@@ -65,7 +65,7 @@ const Register = () =>{
                 <CardInput place="01" type="Username">
                   <div className={`flex border-2 border-gray-300 rounded-md overflow-hidden h-12 ${form.username && "border-gray-400"} transition-colors duration-300`}>
                     <input type="text" name="username" className=" outline-none w-full px-3 font-Rubik font-medium text-gray-700 text-lg" value={form.username} onChange={changeHandle} autoComplete="off"/>
-                    <div className={`px-3 flex items-center ${usernameCheck ? "bg-yellow-400 text-white" : "bg-gray-200 text-gray-700"} border-l-2 border-gray-300 ${form.username && "border-gray-400"} text-lg`}>{usernameCheck ? <HiOutlineCheck/> : <HiOutlineX/>}</div>
+                    <div className={`px-3 flex items-center ${usernameCheck ? "bg-yellow-400 text-white" : "bg-gray-200 text-gray-700"} transition-colors duration-300 border-l-2 border-gray-300 ${form.username && "border-gray-400"} text-lg`}>{usernameCheck ? <HiOutlineCheck/> : <HiOutlineX/>}</div>
                   </div>
                 </CardInput>
                 <CardInput place="02" type="Password">
