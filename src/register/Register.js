@@ -73,19 +73,19 @@ const Register = () =>{
                     <input type={seePassword ? "text" : "password"} name="password" className={`outline-none w-full px-3 font-Rubik font-medium transition-colors duration-300 text-lg border-2 border-gray-300 h-12 rounded-md ${form.password && "border-gray-400"}`} value={form.password} onChange={changeHandle} autoComplete="off"/>
                     <button onClick={()=> setSeePassword(!seePassword)} className={`absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-400 ${form.password && "text-gray-700"}`}>{seePassword ? <HiEyeOff/> :<HiEye/>}</button>
                   </div>
-                  <p className={`text-center font-Rubik text-gray-400 my-2 ${form.conPassword && "text-gray-700"}`}>Confirm password</p>
+                  <p className={`text-center font-Rubik text-gray-500 my-2`}>Confirm password</p>
                   <div className={`flex border-2 border-gray-300 rounded-md overflow-hidden h-12 transition-colors duration-300 ${form.conPassword && "border-gray-400"}`}>
                     <input type={seePassword ? "text" : "password"} name="conPassword" className="outline-none text-gray-700 text-lg w-full px-3 font-Rubik font-medium" value={form.conPassword} onChange={changeHandle} autoComplete="off"/>
                     <div className={`px-3 flex items-center ${passwordCheck ? "bg-yellow-400 text-white" : "bg-gray-200 text-gray-700"} transition-colors border-l-2 border-gray-300 duration-300 text-lg ${form.conPassword && "border-gray-400"}`}>{passwordCheck ? <HiOutlineCheck/> : <HiOutlineX/>}</div>
                   </div>
                 </CardInput>
               </Method>
-                <div className="flex flex-col-reverse items-center md:flex-row justify-center gap-2">
-                  <Link to="/login" className="w-3/4 max-w-xs md:w-full md:max-w-none">
-                    <button type="button" className="w-full px-6 py-2.5 hover:bg-gray-50 active:bg-gray-100 border-2 border-gray-700 font-Rubik font-medium rounded-md shadow-sm hover:shadow-md transition-all duration-300">Login?</button>
-                  </Link>
-                  <button type="submit" className={`w-3/4 max-w-xs md:w-full md:max-w-none px-6 py-2.5 bg-yellow-400 ${(usernameCheck && passwordCheck) &&"hover:bg-headcardbg hover:shadow-md transition-all duration-300"} active:bg-placebg border-2 border-gray-700 font-Rubik font-medium rounded-md shadow-sm disabled:opacity-60 disabled:cursor-default`} disabled={!usernameCheck || !passwordCheck}>Register</button>
-                </div>
+              <div className="flex flex-col items-center justify-center gap-3 divide-y-2 divide-dashed md:w-3/4 mx-auto">
+                <button type="submit" className={`w-3/4 max-w-xs md:w-full md:max-w-none px-6 py-2.5 bg-yellow-400 ${(usernameCheck && passwordCheck) &&"hover:bg-headcardbg hover:shadow-md transition-all duration-300"} active:bg-placebg border-2 border-gray-700 font-Rubik font-medium rounded-md shadow-sm disabled:opacity-60 disabled:cursor-default`} disabled={!usernameCheck || !passwordCheck}>Register</button>
+                <Link to="/login" className="w-3/4 max-w-xs md:w-full md:max-w-none pt-3">
+                  <button type="button" className="w-full px-6 py-2.5 hover:bg-gray-50 active:bg-gray-100 border-2 border-gray-700 font-Rubik font-medium rounded-md shadow-sm hover:shadow-md transition-all duration-300">Got an account?</button>
+                </Link>
+              </div>
             </div>
             <div className="md:pl-5"> {/* Method 2 */}
               <div className="hidden md:block"> {/* On medium size */}
